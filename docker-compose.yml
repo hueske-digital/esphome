@@ -1,0 +1,26 @@
+services:
+  esphome:
+    image: esphome/esphome
+    restart: unless-stopped
+    environment:
+      - TZ
+    volumes:
+      - app_config:/config
+    labels:
+      backups: "true"
+    networks:
+      proxy_apps:
+      host_mode:
+        ipv4_address: ${ESPHOME_IP}
+
+volumes:
+  app_config:
+
+networks:
+  proxy_apps:
+    name: proxy_apps
+    external: true
+
+  host_mode:
+    name: host_mode
+    external: true
