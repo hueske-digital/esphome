@@ -1,5 +1,5 @@
 services:
-  esphome:
+  app:
     image: esphome/esphome
     restart: unless-stopped
     environment:
