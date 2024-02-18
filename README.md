@@ -10,7 +10,7 @@ https://esphome.home.yourdomain.de {
     import header
 
     handle @internal {
-        reverse_proxy esphome-esphome-1:6052
+        reverse_proxy esphome-app-1:6052
     }
     respond 403
 }
